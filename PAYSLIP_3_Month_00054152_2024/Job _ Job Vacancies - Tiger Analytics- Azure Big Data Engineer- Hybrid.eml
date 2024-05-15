@@ -1,0 +1,362 @@
+Delivered-To: paladugusravanthi005@gmail.com
+Received: by 2002:a05:7300:24c9:b0:114:fcd5:1758 with SMTP id r9csp2888233dyi;
+        Wed, 15 May 2024 04:05:05 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGGT3FAZYlwYCh5EgV5Qqdfqn+K49I7SzZHA//naWS3lLt/yTTaR2v8VaVRLjtKS7U2yFIm
+X-Received: by 2002:a17:90b:b04:b0:2b9:fc72:547e with SMTP id 98e67ed59e1d1-2b9fc726ba5mr273897a91.18.1715771105618;
+        Wed, 15 May 2024 04:05:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1715771105; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zTr9UA/r50lMuGhWMlu8Bv32iLdmgchbUYBScJ3xT1SUuRRa+0hvburqvetKECIiAE
+         WkRGALRpV2lV/95VQVI/LK59KPoFXIx5lLuyoe4Hzp7B9pVvJnFnO369yVB8Zrd6Ea4v
+         4/pOsXlyiCoZqKK5uVKW6r3mii0p523KPgNd/AhP2p7szQ3/gbS5aXLWkKXGhS/P4eiy
+         XOr3Ov9lEZH0RsmlN2eTOGJkQmUytfal3+IecT7CGDoMbOrB/0jalNXNJdFNg3f3uxEG
+         CtBkXDUy/dYbdIwC1dS/5SI2VUalDsYVCEVsOA5yKGE6MBiNeDjYIQmISGBhv0OHv1SJ
+         iYLw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=unique-id:accept:format:charset:mime-version:subject:to:reply-to
+         :sender:from:message-id:date:dkim-signature;
+        bh=60wASEoVDpRau8mYw0h2LAu6XeSRNiFQoUxeDSrbj9M=;
+        fh=WElFQoIxFEIpzhZCAKhmT7M7YST+hwxOyoHrOcNuI5A=;
+        b=Kk82uDHylfWszJH9XgvIMlrBQqrftdx0gZvIAYL7FlyofugkWKZ5cn+GX5qzzIGXzP
+         ryvDvYLXEYymet/ijEIT7THG3aYrAzZKFE5QjrLwK45ybEeHGBk3i3jUT3UDUn+cwp3h
+         93Ft5YuwEmjlfgRBoVfJ7+79vJlPXNukr1IXeBDsqB3JvoPpf3SFMsVXE8sLIkQRNeKb
+         dyzKr6pf+QHPz0H3qPHNEq/vW1lIvMfbzJ2Xb2OpUjqqd9hKexkKqCJ9Tj11/qsgeBpI
+         GR07HF+gBD7AB/F9AEFn2UnO1GttBBtCM8F61JvlmwTP7vcPzwS1U+6SyiMGSdSMMogh
+         E4CQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@naukri.com header.s=2015 header.b=tplBCT28;
+       spf=pass (google.com: domain of akshatha.anandredglnzxjhbmfsexrpy3muy29t@naukri.com designates 103.214.115.132 as permitted sender) smtp.mailfrom=akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=naukri.com
+Return-Path: <akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com>
+Received: from nmail-one03-two14-one15-one32.naukri.com (nmail-one03-two14-one15-one32.naukri.com. [103.214.115.132])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-634113470d1si15010498a12.464.2024.05.15.04.05.04
+        for <paladugusravanthi005@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 15 May 2024 04:05:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of akshatha.anandredglnzxjhbmfsexrpy3muy29t@naukri.com designates 103.214.115.132 as permitted sender) client-ip=103.214.115.132;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@naukri.com header.s=2015 header.b=tplBCT28;
+       spf=pass (google.com: domain of akshatha.anandredglnzxjhbmfsexrpy3muy29t@naukri.com designates 103.214.115.132 as permitted sender) smtp.mailfrom=akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=naukri.com
+Return-Path: <akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=naukri.com; s=2015;
+	t=1715771100; bh=Nn/vuEVBnuUDK1HtfY7ahI/zsJTlsolKaYQqTqp7mpY=;
+	h=Date:From:Reply-To:To:Subject;
+	b=tplBCT28mVT2k6y+oQ7YKQ2A83ACdzLvt154bXtabVGxkgZWShE8YjaO42n9oCVeP
+	 MvfiTP0yrYlQ+kll5Vsc6SpkMKG4HJFLrUeh+JucTQx897BrBrRbbm5DdyZ+IYYO9w
+	 Q7tqEa/3MNbE2hT7VtXVZz4m4fg7qzGnafTdDkMU=
+Received: from [172.10.115.135] ([172.10.115.135:46548] helo=n5plnjobdb22.ieil.net)
+	by n5plimla01.ieil.net (envelope-from <akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com>)
+	(ecelerity 3.6.13.50539 r(Core:3.6.13.0)) with ESMTP
+	id 09/FA-43459-CD694466; Wed, 15 May 2024 16:35:00 +0530
+Date: Wed, 15 May 2024 16:34:59 +0530 (IST)
+Message-ID: <09.FA.43459.CD694466@n5plimla01.ieil.net>
+From: TIGER ANALYTICS INDIA CONSULTING PRIVATE LIMITED   <akshatha.anandredGlnZXJhbmFseXRpY3MuY29t@naukri.com>
+Sender:  <resdex@naukri.com>
+Reply-To:  <akshatha.anandredglnzxjhbmfsexrpy3muy29t116mk31q2h-rd@rmsg.naukri.com>
+To: Paladugu Sravanthi <paladugusravanthi005@gmail.com>
+Subject: Job | Job Vacancies - Tiger Analytics- Azure Big Data Engineer-
+ Hybrid
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1575408_900154599.1715771099830"
+CharSet: UTF-8
+format: flowed
+accept: application/json
+unique-id: 112|x|664496187f66cf49bf3e9314|x|66449680581b7bee46a99397|x||x|1
+
+------=_Part_1575408_900154599.1715771099830
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1575409_662527368.1715771099830"
+
+------=_Part_1575409_662527368.1715771099830
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+=09=09<body>
+=09=09<div style=3D"font-size:0.1px;">
+=09=09  <img src=3D"https://logs.naukri.com/collectorapi/v1/uba?data=3D%7B%=
+22deviceType%22%3A%22WEB%22%2C%22additionalParams%22%3A%7B%7D%2C%22campaign=
+Id%22%3Anull%2C%22communicationId%22%3A%2266449680581b7bee46a99397%22%2C%22=
+communicationType%22%3A%22mail%22%2C%22journeyId%22%3Anull%2C%22userId%22%3=
+A%22149241229%22%2C%22eventCode%22%3A%22resdex_rmj_er2_mail%22%2C%22encEmai=
+l%22%3A%228cd8661566ac769e92fdcb94a6be4cdf26bb9bc294580f91cdbcaf9347d69f423=
+62ef947231c4c7c237376ccad94d1f7%22%2C%22mailType%22%3A%22rmj%22%2C%22mailer=
+Id%22%3A%2278621670%22%2C%22requestId%22%3A%22664496187f66cf49bf3e9314%22%2=
+C%22appId%22%3A%22112%22%2C%22segmentId%22%3Anull%2C%22tenantId%22%3A%221%2=
+2%2C%22eventName%22%3A%22communicationOpen%22%2C%22parentActivityId%22%3Anu=
+ll%2C%22parentJourneyId%22%3Anull%7D" height=3D"0px" width=3D"0px">
+=09=09</div><div class=3D"emailBody er2"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"585" style=3D"margin-left:auto;margin-right=
+:auto;margin-top:0;margin-bottom:0;" bgcolor=3D"#f3f3f3"> <tr> <td style=3D=
+"background:#ffffff;padding-top:10px;padding-bottom:5px;margin-bottom:5px;l=
+ine-height:16px;" align=3D"center"> <table cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" style=3D"max-width:585px; min-width:300px" width=3D"585" a=
+lign=3D"center"> <tr> <td colspan=3D"3" align=3D"center" style=3D"font-size=
+:10px;color:#a9aaa5"> The sender of this email is registered with Naukri.co=
+m as TIGER ANALYTICS INDIA CONSULTING PRIVATE LIMITED   company.  <!--ALERT=
+MESSAGESTART--> <div style=3D"font-size:11px; font-family:Arial, Helvetica,=
+ sans-serif; color:#333">Do Not forward this email, it contains links which=
+ allow direct login to your Naukri account. </div><!--ALERTMESSAGEEND--> </=
+td> </tr> </table> </td> </tr>  <tr> <td align=3D"center" colspan=3D"3" sty=
+le=3D"border-left: 1px solid #bfbfbf;border-right: 1px solid #bfbfbf;border=
+-top: 1px solid #bfbfbf;"> <table class=3D"fivePerOpa" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" style=3D"width:585px;background:#f7fbfc;"> <tr=
+> <td style=3D"padding-left:30px;padding-right:30px;padding-top:20px;text-a=
+lign:left" colspan=3D"3"> <img id=3D"imgLogo" src=3D"http://www.naukri.com/=
+hotjobs/images/tigermar16.gif" height=3D'50'  alt=3D"" title=3D"" style=3D"=
+background:black;height:50px;Display:inline-block;"> </td> </tr> </table> <=
+/td> </tr>  <tr> <td align=3D"center" style=3D"font-size:14px;color:666659;=
+font-family:arial;border-left: 1px solid #bfbfbf;border-right: 1px solid #b=
+fbfbf;border-bottom: 1px solid #bfbfbf;"> <table class=3D"fivePerOpa" align=
+=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"width=
+:585px;background:#f7fbfc;">  <tr> <td colspan=3D"3" height=3D"20"> </td> <=
+/tr>   <tr> <td colspan=3D"3" style=3D"padding-left:65px;padding-right:65px=
+;padding-bottom:5px;text-align:left"> <table class=3D"tenPerOpa" width=3D"1=
+00%" style=3D"background:#f0f8fa;border:1px dotted #5fb0ca">  <tr> <th styl=
+e=3D"padding: 15px 15px 2px;font-size:20px;font-weight: 500;">Job Vacancies=
+ - Tiger Analytics- Azure Big Data Engineer- Hybrid</th> </tr>  <tr> <td co=
+lspan=3D"3" style=3D"padding: 15px 15px 2px;"> <table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"" width=3D"85%"> <tr>   <td> <table ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0"> <tr> <td style=3D"color:#AC=
+AC9D;font-size:12px;font-weight:bold;text-align:left"> EXPERIENCE </td> </t=
+r> <tr> <td style=3D"font-size:14px;color:#575746;padding-top:5px;font-fami=
+ly:Arial;text-align:left;"> 5.0 - 10.0 yrs </td> </tr> </table> </td>  </tr=
+> </table> </td> </tr> <tr>  <td colspan=3D"3" style=3D"padding-right:15px;=
+padding-left:15px;padding-top:10px;padding-bottom:20px;"> <table cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"> <tr> <td> <table cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"> <tr> <td style=3D"color:#ACA=
+C9D;font-size:12px;font-weight:bold;text-align:left;"> LOCATION <td> </tr> =
+<tr> <td style=3D"font-size:14px;color:#575746;padding-top:5px;word-break:b=
+reak-word;font-family:Arial;text-align:left">Chennai, Hyderabad/Secunderaba=
+d, Bangalore/Bengaluru, Pune </td> </tr> </table> </td> </tr> </table> </td=
+>  </tr>  <tr> <td colspan=3D"3" style=3D"padding-right:15px;padding-left:1=
+5px;padding-bottom:20px;"> <table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" width=3D"100%"> <tbody> <tr> <td> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"> <tbody> <tr> <td style=3D"color:#ACAC9D;font-size:1=
+2px;font-weight:bold;text-align:left;"> KEYSKILLS </td> <td></td> </tr> <tr=
+> <td style=3D"font-size:14px;color:#575746;padding-top:5px;word-break:brea=
+k-word;font-family:Arial;text-align:left">Pyspark,SQL,Azure Data Factory,Az=
+ure Databricks,Azure Data Lake</td> </tr> </tbody> </table> </td> </tr> </t=
+body> </table> </td> </tr>  <tr> <td colspan=3D"3" style=3D"padding-bottom:=
+15px;padding-right:15px;padding-left:15px;"> <table cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" width=3D"100%"> <tr>  <td align=3D"left"> <a clas=
+s=3D"mainPrevBordColor" target=3D"_blank" href=3D" http://my.naukri.com/AL/=
+ResdexRMJMail/alid/{}/redirectParam/applyProcessRMJ?applytype=3Dsingle&Appl=
+yMode=3D1&src=3Drmj &reqId=3D82022&messageId=3DMjAyNDA1I0J1RzBNNm80YlE9PV8x=
+NzE1NzcwOTA0&logstr=3DER2" style=3D"font-size: 16px; font-family: Helvetica=
+, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: =
+3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color:=
+ #5fb0ca; border-top: 12px solid #5fb0ca; border-bottom: 12px solid #5fb0ca=
+; border-right: 56px solid #5fb0ca; border-left: 50px solid #5fb0ca; displa=
+y: inline-block;">Apply Now</a> </td>  <td align=3D"right"> <a class=3D"mai=
+nPrevBordLightColor" target=3D"_blank" href=3D" http://my.naukri.com/AL/Res=
+dexRMJMail/alid/{}/redirectParam/replyView?applytype=3Dsingle&ApplyMode=3D1=
+&src=3Drmj &messageId=3DMjAyNDA1I0J1RzBNNm80YlE9PV8xNzE1NzcwOTA0" style=3D"=
+font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #5fb0ca;=
+ text-decoration: none; border-radius: 3px; -webkit-border-radius: 3px; -mo=
+z-border-radius: 3px; background-color: #e7f3f7; border-top: 12px solid #e7=
+f3f7; border-bottom: 12px solid #e7f3f7; border-right: 65px solid #e7f3f7; =
+border-left: 65px solid #e7f3f7; display: inline-block;">Reply </a> </td> <=
+/tr> </table> </td> </tr> </table> </td> </tr>   <!--ISNEWHTML=3Dtrue--> <!=
+--HEADERSTART--> <!--JOBSTART--><!--EXPERIENCELABEL=3D<strong>Experience re=
+quired for the Job:</strong>--><!--EXPERIENCE=3D5.0 - 10.0 years--><!--LOCA=
+TIONLABEL=3D<strong>Location for the job:</strong>--><!--LOCATION=3DChennai=
+, Hyderabad/Secunderabad, Bangalore/Bengaluru, Pune--> <!--JOBEND--><!--HEA=
+DEREND--> <!--RMJBODYSTART--><!-- VNAME=3D--><!--VPHOTO=3D--> <!--JOBMAXEXP=
+ERIENCE=3D10.0--> <!--JOBMINEXPERIENCE=3D5.0--><!--JOBLOCATION=3DChennai, H=
+yderabad/Secunderabad, Bangalore/Bengaluru, Pune--> <!--JOBMESSAGEID=3DMjAy=
+NDA1I0J1RzBNNm80YlE9PV8xNzE1NzcwOTA0--><!--DESIGNATION=3D--> <!--COMPID=3D-=
+-><!--LOCATION=3D--> <!--VSLUG=3D--><!--PROFILEHEADING=3D--> <!--DOMAINEXP=
+=3D--> <!--APPLYURL=3Dhttp%3A%2F%2Fapply.naukri.com%2Fapply%2FprocessRmj%3F=
+applytype%3Dsingle%26ApplyMode%3D1%26src%3Drmj%26applySrc%3Drmj&reqId=3D820=
+22&messageId=3DMjAyNDA1I0J1RzBNNm80YlE9PV8xNzE1NzcwOTA0--> <!--REPLYURL=3Dh=
+ttps%3A%2F%2Fwww.naukri.com%2Fmyapply%2Fsavermj%3Fsrc%3Drmj&reqId=3D82022&m=
+sgId=3DMjAyNDA1I0J1RzBNNm80YlE9PV8xNzE1NzcwOTA0--> <tr> <td colspan=3D"3" s=
+tyle=3D"color:#95938c;font-size:16px;font-weight:bold;font-family:Arial;pad=
+ding-left:30px;padding-right:30px;padding-top:20px;text-align:left"> Dear P=
+aladugu Sravanthi </td> </tr> <tr> <td colspan=3D"3" style=3D"line-height:2=
+2px;padding-left:30px;padding-right:30px;color:#575746;font-size:14px;font-=
+family:Arial;font-weight:Regular;padding-top:5px;word-break:break-word;text=
+-align:left"> Greetings from Tiger Analytics!<div style=3D"margin-bottom:7p=
+x;margin-left:0;margin-right:0;margin-top:0">&nbsp;Do you want to be a part=
+ of one of the fastest-growing start-ups pioneering what AI and analytics c=
+an do to solve some of the toughest problems faced by organizations globall=
+y?</div><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin=
+-top:0">We develop bespoke solutions powered by data and technology for sev=
+eral Fortune 500 companies. We have offices in multiple cities across the U=
+S, UK, India, and Singapore, and a substantial remote global workforce.</di=
+v><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0=
+">&nbsp; We are looking for Data Engineers with hands-on experience in Spar=
+k, SQL, and Azure data factory/Databricks.</div><div style=3D"margin-bottom=
+:7px;margin-left:0;margin-right:0;margin-top:0">&nbsp;If you are interested=
+. Please forward your resume with the below details:</div><div style=3D"mar=
+gin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">Name:</div><div s=
+tyle=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">Email:=
+</div><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-t=
+op:0">Contact no:</div><div style=3D"margin-bottom:7px;margin-left:0;margin=
+-right:0;margin-top:0">&nbsp;Current Organization:</div><div style=3D"margi=
+n-bottom:7px;margin-left:0;margin-right:0;margin-top:0">&nbsp;Highest Quali=
+fication:</div><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0=
+;margin-top:0">Total years of experience:</div><div style=3D"margin-bottom:=
+7px;margin-left:0;margin-right:0;margin-top:0">Experience in Spark:</div><d=
+iv style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">Ex=
+perience in SQL:</div><div style=3D"margin-bottom:7px;margin-left:0;margin-=
+right:0;margin-top:0">Experience in Azure:</div><div style=3D"margin-bottom=
+:7px;margin-left:0;margin-right:0;margin-top:0">&nbsp;Do you have any caree=
+r gaps?</div><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0;m=
+argin-top:0">&nbsp;Current Location:</div><div style=3D"margin-bottom:7px;m=
+argin-left:0;margin-right:0;margin-top:0">&nbsp;Preferred Location:</div><d=
+iv style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">&n=
+bsp;Current CTC:</div><div style=3D"margin-bottom:7px;margin-left:0;margin-=
+right:0;margin-top:0">Expected CTC:</div><div style=3D"margin-bottom:7px;ma=
+rgin-left:0;margin-right:0;margin-top:0">&nbsp;Notice Period:</div><div sty=
+le=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">Find mor=
+e about Tiger Analytics: https://www.tigeranalytics.com/</div><div style=3D=
+"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0"><br></div><di=
+v style=3D"margin-bottom:7px;margin-left:0;margin-right:0;margin-top:0"><br=
+></div> </td> </tr> <tr> <td colspan=3D"3" height=3D"10"> </td> </tr>  <!--=
+RMJBODYSTOP--> <tr> <td colspan=3D"3" align=3D"left" style=3D"line-height:2=
+6px;padding-left:30px;padding-right:30px;color:#464637;font-size:14px;font-=
+family:Arial;font-weight:Regular;padding-top:5px;word-break:break-all;text-=
+align:left"> <a style=3D"color:#5fb0ca"></a> </td> </tr> <tr> <td colspan=
+=3D"3" height=3D"15"> </td> </tr> <tr> <td colspan=3D"3" align=3D"center" s=
+tyle=3D"font-size:18px; color: #353526;font-family:arial">Sounds Good ? </t=
+d> </tr> <tr> <td colspan=3D"3" height=3D"15"> </td> </tr> <tr> <td colspan=
+=3D"3" style=3D"padding-left:30px;padding-right:30px;text-align:left;"> <ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"> <tr>  =
+<td> <a class=3D"mainPrevBordColor" target=3D"_blank" href=3D" http://my.na=
+ukri.com/AL/ResdexRMJMail/alid/{}/redirectParam/applyProcessRMJ?applytype=
+=3Dsingle&ApplyMode=3D1&src=3Drmj &reqId=3D82022&messageId=3DMjAyNDA1I0J1Rz=
+BNNm80YlE9PV8xNzE1NzcwOTA0&logstr=3DER2" style=3D"font-size: 16px; font-fam=
+ily: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; b=
+order-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; bac=
+kground-color: #5fb0ca; border-top: 12px solid #5fb0ca; border-bottom: 12px=
+ solid #5fb0ca; border-right: 80px solid #5fb0ca; border-left: 80px solid #=
+5fb0ca; display: inline-block;">Apply Now</a> </td>  <td align=3D"right"> <=
+a class=3D"mainPrevBordLightColor" target=3D"_blank" href=3D" http://my.nau=
+kri.com/AL/ResdexRMJMail/alid/{}/redirectParam/replyView?applytype=3Dsingle=
+&ApplyMode=3D1&src=3Drmj &messageId=3DMjAyNDA1I0J1RzBNNm80YlE9PV8xNzE1NzcwO=
+TA0" style=3D"font-size: 16px; font-family: Helvetica, Arial, sans-serif; c=
+olor: #5fb0ca; text-decoration: none; border-radius: 3px; -webkit-border-ra=
+dius: 3px; -moz-border-radius: 3px; background-color: #e7f3f7; border-top: =
+12px solid #e7f3f7; border-bottom: 12px solid #e7f3f7; border-right: 95px s=
+olid #e7f3f7; border-left: 95px solid #e7f3f7; display: inline-block;">Repl=
+y </a> </td> </tr> </table> </td> </tr> <tr> <td colspan=3D"3" height=3D"15=
+"> </td> </tr> <tr>  <td colspan=3D"3" style=3D"font-family:arial;font-size=
+:14px;padding-left:30px;padding-right:30px;color:#575746;word-break:break-w=
+ord;text-align:left">Thanks &amp; Regards,<div style=3D"margin-bottom:7px;m=
+argin-left:0;margin-right:0;margin-top:0">Akshatha A</div><div style=3D"mar=
+gin-bottom:7px;margin-left:0;margin-right:0;margin-top:0">Talent Acquisitio=
+n Team,</div><div style=3D"margin-bottom:7px;margin-left:0;margin-right:0;m=
+argin-top:0">Tiger Analytics</div><div style=3D"margin-bottom:7px;margin-le=
+ft:0;margin-right:0;margin-top:0">akshatha.anandre@tigeranalytics.com</div>=
+</td>  </tr> <tr> <td colspan=3D"3" height=3D"25"> </td> </tr>  <tr> <td co=
+lspan=3D"3" style=3D"padding-left:30px;padding-right:30px;padding-top:10px;=
+padding-bottom:10px"> <table align=3D"center" width=3D"100%" style=3D"borde=
+r-bottom:1px dotted #dfdbda">  </table> </td> </tr> <!--RMJFOOTERSTART-->  =
+<tr> <td colspan=3D"3" style=3D"font-size:10px;color:#c3c1b7;padding-left:3=
+0px;padding-right:30px;text-align:left">You are receiving this e-mail becau=
+se your profile contained one or more of the following words that the recru=
+iter searched on:" <em style=3D'font-weight:700;font-style: normal;font-siz=
+e:10px'>Azure Data Factory</em> ", " <em style=3D'font-weight:700;font-styl=
+e: normal;font-size:10px'>Azure Databricks</em> ", " <em style=3D'font-weig=
+ht:700;font-style: normal;font-size:10px'>Azure Data Engineer</em> ", " <em=
+ style=3D'font-weight:700;font-style: normal;font-size:10px'>Azure Data Lak=
+e</em> ", " <em style=3D'font-weight:700;font-style: normal;font-size:10px'=
+>Pyspark</em> ", " <em style=3D'font-weight:700;font-style: normal;font-siz=
+e:10px'>SQL Azure</em> ", " <em style=3D'font-weight:700;font-style: normal=
+;font-size:10px'>Python</em> "</td> </tr>  <tr> <td colspan=3D"3" align=3D"=
+left" style=3D"font-size:11px;padding-left:30px;padding-right:30px"> Is thi=
+s job relevant to you? <a target=3D"_blank" href=3D"http://jobsearch.naukri=
+.com/mynaukri/jobs_feedback.php?response=3Dyes&mid=3D78621670" style=3D"col=
+or:#0000ff;margin-left:5px;font-weight:bold;text-decoration:none">Yes</a> <=
+a target=3D"_blank" href=3D"http://jobsearch.naukri.com/mynaukri/jobs_feedb=
+ack.php?response=3Dno&mid=3D78621670" style=3D"color:#0000ff;margin-left:5p=
+x;font-weight:bold;text-decoration:none">No</a> </td> </tr> <tr> <td colspa=
+n=3D"3" height=3D"40"> </td> </tr> <tr> <td colspan=3D"3" style=3D"padding-=
+left:30px;padding-right:30px"> <table width=3D"100%"> <tr> <td> <table cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"> <tr> <td heigh=
+t=3D"30" width=3D"30"> <img src=3D"https://static.naukimg.com/s/4/112/i/mai=
+lTpl_search.png" alt=3D"" title=3D""> </td> <td> <table> <tr> <td style=3D"=
+color:#b7b7aa;font-size:14px;text-align:left"> Be on top of </td> </tr> <tr=
+> <td style=3D"color:#b7b7aa;font-size:14px;text-align:left"> recruiter's s=
+earch </td> </tr> <tr> <td style=3D"font-family:arial;font-size:14px;text-a=
+lign:left"> <a class=3D"linkMainColor" target=3D"_blank" href=3D'http://my.=
+naukri.com/HomePage/view' style=3D"text-decoration:none;color:#5fb0ca;font-=
+family:arial;font-size:14px;">Update your resume</a> </td> </tr> </table> <=
+/td> </tr> </table> </td> <td width=3D"80"> </td> <td> <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"> <tr> <td height=3D"30=
+" width=3D"30"> <img src=3D"https://static.naukimg.com/s/4/112/i/mailTpl_be=
+ll.png" alt=3D"" title=3D""> </td> <td> <table> <tr> <td style=3D"color:#b7=
+b7aa;font-size:14px;text-align:left"> Receive similar jobs </td> </tr> <tr>=
+ <td style=3D"color:#b7b7aa;font-size:14px;text-align:left"> in your inbox =
+</td> </tr> <tr> <td style=3D"font-family:arial;font-size:14px;text-align:l=
+eft"> <a class=3D"linkMainColor" target=3D"_blank" href=3D"http://jobsearch=
+.naukri.com/mynaukri/js_msngr.php?xz=3D0_0_5&ma=3DC" style=3D"text-decorati=
+on:none;color:#5fb0ca;font-family:arial;font-size:14px;">Set a job alert</a=
+> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr=
+> <tr> <td colspan=3D"3" style=3D"padding-left:30px;padding-right:30px;padd=
+ing-top: 13px;padding-bottom: 10px;"> <table align=3D"center" width=3D"100%=
+" style=3D"border-bottom:1px dotted #dfdbda"></table> </td> </tr> <tr> <td =
+colspan=3D"3" style=3D"padding-left:30px;padding-right:30px"> <table width=
+=3D"100%"> <tr> <td style=3D"color:#b7b7aa;font-size:14px;" align=3D"center=
+">Your resume has only 30 seconds to impress a Recruiter </td> </tr> <tr> <=
+td style=3D"font-family:arial;font-size:14px" align=3D"center"><a class=3D"=
+linkMainColor" target=3D"_blank" href=3D"http://resume.naukri.com/resume-wr=
+iting-services?fftid=3D700003" style=3D"text-decoration:none;color:#5fb0ca;=
+font-family:arial;font-size:14px;">Get your resume written by Experts</a></=
+td> </tr> <tr> <td style=3D"color:#b7b7aa;font-size:14px;" align=3D"center"=
+>Call 1800-102-5557 now! (Toll-Free) </td> </tr> </table> </td> </tr> <tr> =
+<td colspan=3D"3" style=3D"padding-left:30px;padding-right:30px;padding-top=
+: 16px;padding-bottom: 15px;"> <table align=3D"center" width=3D"100%" style=
+=3D"border-bottom:1px dotted #dfdbda"></table> </td> </tr> <tr> <td colspan=
+=3D"3" style=3D"padding-left:30px;padding-right:30px"> <table width=3D"100%=
+"> <tr> <td style=3D"color:#ACAC9D;font-size:12px;text-align:left"> Disclai=
+mer </td> </tr> <tr> <td style=3D"color:#ACAC9D;font-size:10px;text-align:l=
+eft"> The sender of this email is registered with naukri.com as <em style=
+=3D"font-weight:700;font-style: normal;font-size:10px">TIGER ANALYTICS INDI=
+A CONSULTING PRIVATE LIMITED  </em> (<a target=3D"_blank" href=3D'mailto:pr=
+achi.singh@tigeranalytics.com' style=3D'cursor:pointer;'>prachi.singh@tiger=
+analytics.com</a>, NO.143,2nd FLOOR,RMZ MILLENNIUM BUSINESS PARK,MGR   - 60=
+0096) using Naukri.com services. The responsibility of checking the authent=
+icity of offers/correspondence lies with you. If you consider the content o=
+f this email inappropriate or spam, you may: Forward this email to: <a targ=
+et=3D"_blank" href=3D'mailto:compliance@naukri.com' style=3D'cursor:pointer=
+;'>compliance@naukri.com</a> or you can <a target=3D"_blank" href=3D'http:/=
+/my.naukri.com/BlockCompany/blockOneCompany?companyIdStr=3D642976' style=3D=
+'cursor:pointer;'>Block this Company</a> from searching your resume in the =
+database.<br/><em style=3D"font-weight:700;font-style: normal;font-size:10p=
+x;color: #ACAC9D;">Please Note:</em> This mail is a private message from th=
+e recruiter. We have enabled auto login for your convenience, you are stron=
+gly advised not to forward this email to protect your account from unauthor=
+ized access.<br/>Advisory: Please do not pay any money to anyone who promis=
+es to find you a job. This could be in the form of a registration fee or do=
+cument processing fee or visa charges or any other pretext. The money could=
+ be asked for upfront or it could be asked after trust has been built after=
+ some correspondence has been exchanged. Also please note that in case you =
+get a job offer or a letter of intent without having been through an interv=
+iew process it is probably a scam and you should contact <a target=3D"_blan=
+k" href=3D'mailto:compliance@naukri.com' style=3D'cursor:pointer;'>complian=
+ce@naukri.com</a> for advise. </td> </tr> <tr> <td> <img width=3D"0px" heig=
+ht=3D"0px" src=3D"http://jatracking.naukri.com/Finale/tracking_resdex.php?d=
+ata=3DeyJtYWlsS2V5IjoiMDY2OTgwZmQwMGViMGZlY2JmN2JkYmFjOWY1ODFjMTMiLCJjbGllb=
+nQiOiJSTUpNYWlsIiwiYXBwX2lkIjoxMTIsIm1haWxlcl9pZCI6Ijc4NjIxNjcwIiwibWFpbHNl=
+bnR0aW1lc3RhbXAiOjE3MTU3NzA5MDM4ODEsInNvdXJjZSI6IlJNSiIsInN0eWxlIjoiRVIyIiw=
+icmR4dXNlcmlkIjoiMTIzNjgzMjYzIiwiY29tcGFueWlkIjoxMzI2NDk4LCJkb2NfaWQiOiJkMz=
+czOTI5YWUwYTA2YzQwZWIyNGFhYzMyYzEwNTE4OSIsImpzdW5pcWlkIjoiMWQyNWM4ODNjODkwN=
+DMwYTlkZDBlZDA0MTk2MDNiYmYifQ=3D=3D" style=3D"display:none !important"/><im=
+g width=3D"0px" height=3D"0px" src=3D"https://logs.naukri.com/collectorapi/=
+v1/uba?data=3D%7B%22tenantId%22%3A1%2C%22deviceType%22%3A%22WEB%22%2C%22eve=
+ntName%22%3A%22communicationOpen%22%2C%22communicationType%22%3A%22MAIL%22%=
+2C%22mailerId%22%3A78621670%2C%22mailType%22%3A%22RMJ%22%2C%22communication=
+Id%22%3A78621670%2C%22appId%22%3A112%2C%22userId%22%3A123683263%2C%22compan=
+yId%22%3A1326498%2C%22encEmail%22%3A%22{{encEmail}}%22%7D" style=3D"display=
+:none !important"/>  </td> </tr> </table> </td> </tr> <tr> <td colspan=3D"3=
+" height=3D"50"> </td> </tr> </table> </td> </tr> </table></div><!--RMJFOOT=
+EREND--><!--Footer Ends--> </body>
+------=_Part_1575409_662527368.1715771099830--
+
+------=_Part_1575408_900154599.1715771099830--
