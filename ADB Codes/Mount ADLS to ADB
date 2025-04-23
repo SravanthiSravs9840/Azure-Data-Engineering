@@ -1,1 +1,41 @@
+#Mount ADLS to ADB using SAS Token
+%python
+spark.conf.set(
+    "fs.azure.account.auth.type.qedatalakestorage.dfs.core.windows.net",
+    "SAS"
+)
+spark.conf.set(
+    "fs.azure.sas.token.provider.type.qedatalakestorage.dfs.core.windows.net",
+    "org.apache.hadoop.fs.azurebfs.sas.FixedSASTokenProvider"
+)
+spark.conf.set(
+    "fs.azure.sas.fixed.token.qedatalakestorage.dfs.core.windows.net",
+    "sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2027-01-30T13:41:32Z&st=2025-04-23T05:41:32Z&spr=https,http&sig=wFnACsSxbOMTqokziFeiSPrtLtsHXvMhLful%2FuN49XU%3D"
+)
 
+df = spark.read.load(
+    "abfss://landing@qedatalakestorage.dfs.core.windows.net/customer details_20250415.csv",
+    format="csv",
+    header=True
+)
+
+display(df)
+
+#Mount ADLS to ADB using Access Keys
+storageAccountName = dbutils.secrets.get('qe-kv','qe-storageaccount-name')
+storageAccountAccessKey = dbutils.secrets.get('qe-kv', 'qe-adls-accesskey')
+mountPoints=["landing","bronze","silver","gold"]
+for mountPoint in mountPoints:
+    if not any(mount.mountPoint == f"/mnt/{mountPoint}" for mount in dbutils.fs.mounts()):
+        try:
+            dbutils.fs.mount(
+            source = "wasbs://{}@{}.blob.core.windows.net".format(mountPoint, storageAccountName),
+            mount_point = f"/mnt/{mountPoint}",
+            extra_configs = {'fs.azure.account.key.' + storageAccountName + '.blob.core.windows.net': storageAccountAccessKey}
+            )
+            print(f"{mountPoint} mount succeeded!")
+        except Exception as e:
+            print("mount exception", e)
+
+
+dbutils.fs.mounts()
